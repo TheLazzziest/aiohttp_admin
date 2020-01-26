@@ -31,7 +31,7 @@ def build_trafaret(sa_type, **kwargs):
     elif isinstance(sa_type, sa.sql.sqltypes.Integer):
         trafaret = t.ToInt(**kwargs)
 
-    elif isinstance(sa_type, sa.sql.sqltypes.Float):
+    elif isinstance(sa_type, (sa.sql.sqltypes.Float, sa.sql.sqltypes.Numeric,)):
         trafaret = t.ToFloat(**kwargs)
 
     elif isinstance(sa_type, sa.sql.sqltypes.DateTime):
